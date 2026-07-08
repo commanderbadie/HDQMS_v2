@@ -48,7 +48,16 @@ export default async function NewsDetailPage({ params }: PageProps) {
       <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="bg-primary/5 rounded-lg p-8 mb-8">
           <p className="text-muted-foreground leading-relaxed whitespace-pre-wrap">
-            {article.content || `${article.excerpt}\n\nThis is the full article content. In a real application, this would be pulled from a database or CMS. The article covers important updates and developments related to ${article.category.toLowerCase()} at our hospital.\n\nOur commitment to excellence in healthcare continues to drive innovation and patient care improvements. We remain dedicated to providing the highest quality medical services to our community.\n\nFor more information, please contact our communications department or visit our website.`}
+            {article.excerpt}
+          </p>
+          <p className="text-muted-foreground leading-relaxed mt-4">
+            This is the full article content. In a real application, this would be pulled from a database or CMS. The article covers important updates and developments related to {article.category.toLowerCase()} at our hospital.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mt-4">
+            Our commitment to excellence in healthcare continues to drive innovation and patient care improvements. We remain dedicated to providing the highest quality medical services to our community.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mt-4">
+            For more information, please contact our communications department or visit our website.
           </p>
         </div>
 

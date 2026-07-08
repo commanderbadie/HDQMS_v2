@@ -86,7 +86,7 @@ export default function AdminQueuePage() {
           <p className="text-muted-foreground mt-1">Manage patient queue and operations</p>
         </div>
         <Dialog open={showAddDialog} onOpenChange={setShowAddDialog}>
-          <DialogTrigger asChild>
+          <DialogTrigger onClick={() => setShowAddDialog(true)}>
             <Button>
               <Plus className="size-4 mr-2" />
               Add Patient
