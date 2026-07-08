@@ -3,7 +3,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Phone, MapPin, Clock } from 'lucide-react';
-import { locations } from '@/lib/data';
+import { LOCATIONS } from '@/lib/data';
 import Link from 'next/link';
 
 export default function LocationsPage() {
@@ -22,7 +22,7 @@ export default function LocationsPage() {
       {/* Locations Grid */}
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {locations.map((location) => (
+          {LOCATIONS.map((location) => (
             <Card key={location.id} className="overflow-hidden hover:shadow-lg transition-shadow">
               <CardHeader className="bg-primary/5">
                 <CardTitle className="text-xl">{location.name}</CardTitle>

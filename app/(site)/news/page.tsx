@@ -2,7 +2,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { news } from '@/lib/data';
+import { NEWS } from '@/lib/data';
 import Link from 'next/link';
 import { formatDate } from '@/lib/utils';
 import { ArrowRight, Calendar } from 'lucide-react';
@@ -23,24 +23,24 @@ export default function NewsPage() {
       {/* News Grid */}
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         {/* Featured Article */}
-        {news.length > 0 && (
+        {NEWS.length > 0 && (
           <div className="mb-12">
             <Card className="overflow-hidden bg-gradient-to-br from-primary/5 to-background border-primary/20">
               <div className="grid md:grid-cols-2 gap-6 p-8">
                 <div className="flex flex-col justify-between">
                   <div>
                     <div className="flex items-center gap-2 mb-3">
-                      <Badge>{news[0].category}</Badge>
+                      <Badge>{NEWS[0].category}</Badge>
                       <span className="text-xs text-muted-foreground flex items-center gap-1">
                         <Calendar className="size-3" />
-                        {formatDate(new Date(news[0].date))}
+                        {formatDate(new Date(NEWS[0].date))}
                       </span>
                     </div>
-                    <h2 className="text-3xl font-bold mb-3">{news[0].title}</h2>
-                    <p className="text-muted-foreground mb-6">{news[0].excerpt}</p>
+                    <h2 className="text-3xl font-bold mb-3">{NEWS[0].title}</h2>
+                    <p className="text-muted-foreground mb-6">{NEWS[0].excerpt}</p>
                   </div>
                   <Link
-                    href={`/news/${news[0].id}`}
+                    href={`/news/${NEWS[0].id}`}
                     className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
                   >
                     Read full story <ArrowRight className="size-4" />
@@ -48,8 +48,8 @@ export default function NewsPage() {
                 </div>
                 <div className="bg-gradient-to-br from-primary to-primary/80 rounded-lg h-full min-h-[300px] flex items-center justify-center">
                   <div className="text-center text-white">
-                    <div className="text-6xl font-bold opacity-20 mb-2">{news[0].id}</div>
-                    <p className="text-white/80">{news[0].category}</p>
+                    <div className="text-6xl font-bold opacity-20 mb-2">{NEWS[0].id}</div>
+                    <p className="text-white/80">{NEWS[0].category}</p>
                   </div>
                 </div>
               </div>
@@ -61,7 +61,7 @@ export default function NewsPage() {
         <div>
           <h3 className="text-2xl font-bold mb-6">All Articles</h3>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {news.slice(1).map((article) => (
+            {NEWS.slice(1).map((article) => (
               <Card key={article.id} className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
                 <CardHeader className="bg-primary/5">
                   <div className="flex items-center justify-between mb-2">
