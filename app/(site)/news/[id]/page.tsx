@@ -1,6 +1,6 @@
 'use client';
 
-import { news } from '@/lib/data';
+import { NEWS } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
@@ -15,7 +15,7 @@ interface PageProps {
 
 export default async function NewsDetailPage({ params }: PageProps) {
   const { id } = await params;
-  const article = news.find((a) => a.id === id);
+  const article = NEWS.find((a) => a.id === id);
 
   if (!article) {
     notFound();
@@ -69,7 +69,7 @@ export default async function NewsDetailPage({ params }: PageProps) {
         <div className="mt-12">
           <h3 className="text-2xl font-bold mb-6">Related Articles</h3>
           <div className="grid gap-4 md:grid-cols-2">
-            {news
+            {NEWS
               .filter((a) => a.category === article.category && a.id !== article.id)
               .slice(0, 2)
               .map((relatedArticle) => (
