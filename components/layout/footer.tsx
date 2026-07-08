@@ -4,11 +4,11 @@ import {
   Phone,
   Mail,
   MapPin,
-  Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
-  Youtube,
+  Globe,
+  Send,
+  Share2,
+  Users,
+  Heart,
 } from "lucide-react"
 import { HOSPITAL_NAME, HOSPITAL_PHONE, HOSPITAL_EMAIL, HOSPITAL_ADDRESS } from "@/lib/data"
 
@@ -62,11 +62,11 @@ export function Footer() {
             </p>
             <div className="flex gap-3">
               {[
-                { icon: Facebook, label: "Facebook" },
-                { icon: Twitter, label: "Twitter" },
-                { icon: Instagram, label: "Instagram" },
-                { icon: Linkedin, label: "LinkedIn" },
-                { icon: Youtube, label: "YouTube" },
+                { icon: Globe, label: "Website" },
+                { icon: Send, label: "Email" },
+                { icon: Share2, label: "Share" },
+                { icon: Users, label: "Community" },
+                { icon: Heart, label: "Donate" },
               ].map(({ icon: Icon, label }) => (
                 <a
                   key={label}
