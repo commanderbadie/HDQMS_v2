@@ -75,10 +75,11 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           </Link>
 
           <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="sm">
-                <Menu className="size-5" />
-              </Button>
+            <SheetTrigger
+              className="inline-flex items-center justify-center rounded-md p-2 text-foreground hover:bg-muted transition-colors"
+              aria-label="Open navigation menu"
+            >
+              <Menu className="size-5" />
             </SheetTrigger>
             <SheetContent side="right" className="w-64">
               <nav className="space-y-2 mt-6">
