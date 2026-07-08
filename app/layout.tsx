@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#0d1117" },
+    { media: "(prefers-color-scheme: dark)", color: "#0c1a2e" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -51,6 +51,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
+      data-scroll-behavior="smooth"
       className={cn("bg-background antialiased", inter.variable, playfair.variable)}
     >
       <body className="font-sans">
