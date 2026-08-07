@@ -1,2 +1,2 @@
-HDQMS V2
+what is hospital digital queue management system
 
